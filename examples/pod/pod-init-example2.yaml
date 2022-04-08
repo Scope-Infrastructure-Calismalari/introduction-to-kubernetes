@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-example2
+spec:
+  containers:
+  - name: web
+    image: nginx
+  initContainers:
+  - name: sleepy
+    image: alpine
+    command: ['sleep','60']

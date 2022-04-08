@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx-prod
+  name: nginx-prod
+  namespace: production
+spec:
+  containers:
+  - image: nginx
+    name: nginx-prod
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+
